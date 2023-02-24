@@ -1,0 +1,18 @@
+@use "./../../utils/colors";
+@use "./../../utils/mixins";
+
+.header {
+    @include mixins.flex(row, space-between, center);
+    background-color: colors.$dark;
+    padding: 20px 30px;
+
+    &-link {
+        color: white;
+        font-weight: 500;
+        font-size: 24px;
+
+        &:last-child {
+            margin-right: 47px;
+        }
+    }
+}

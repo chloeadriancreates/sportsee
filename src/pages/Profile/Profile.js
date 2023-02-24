@@ -1,8 +1,11 @@
+import Header from "../../components/Header/Header";
 import "./Profile.scss";
 
 function Profile() {
     return (
-        <div></div>
+        <div>
+            <Header />
+        </div>
     );
 }
 
