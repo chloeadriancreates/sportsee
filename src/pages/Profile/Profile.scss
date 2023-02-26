@@ -6,7 +6,7 @@
     width: 100vw;
 
     &-main {
-        @include mixins.flex(row, center, flex-start);
+        @include mixins.flex(row, start, flex-start);
         width: 100%;
         flex-grow: 1;
 
