@@ -1,18 +1,9 @@
 @use "../../utils/mixins";
 
-.profile {
-    @include mixins.flex(column, flex-start, flex-start);
+.stats {
+    @include mixins.flex(row, space-between, flex-start);
 
-    &-content {
-        margin: 116px 0 0 187px;
-        padding: 70px 110px;
-
-        &-stats {
-            @include mixins.flex(row, space-between, flex-start);
-
-            &-counters {
-                @include mixins.flex(column, space-between, flex-start);
-            }
-        }
+    &-counters {
+        @include mixins.flex(column, space-between, flex-start);
     }
 }

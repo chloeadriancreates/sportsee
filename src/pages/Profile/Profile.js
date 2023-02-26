@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Counter from "../../components/Counter/Counter";
 import Greeting from "../../components/Greeting/Greeting";
-import Header from "../../components/Header/Header";
-import Sidebar from "../../components/Sidebar/Sidebar";
+import Template from "../../components/Template/Template";
 import { getData } from "../../utils/getData";
 import "./Profile.scss";
 
@@ -20,14 +19,12 @@ function Profile() {
     }, [user]);
 
     return (
-        <div className="profile">
-            <Sidebar />
-            <Header />
+        <Template>
             { user &&
-                <div className="profile-content">
+                <div>
                     <Greeting name={user.data.userInfos.firstName} />
-                    <div className="profile-content-stats">
-                        <div className="profile-content-stats-counters">
+                    <div className="stats">
+                        <div className="stats-counters">
                             <Counter value={user.data.keyData.calorieCount} type="Calories" />
                             <Counter value={user.data.keyData.proteinCount} type="Protéines" />
                             <Counter value={user.data.keyData.carbohydrateCount} type="Glucides" />
@@ -36,7 +33,7 @@ function Profile() {
                     </div>
                 </div>
             }
-        </div>
+        </Template>
     );
 }
 

@@ -1,19 +1,14 @@
-import Header from "../../components/Header/Header";
-import Sidebar from "../../components/Sidebar/Sidebar";
-import "./Home.scss";
 import UserCard from "../../components/UserCard/UserCard";
+import Template from "../../components/Template/Template";
+import "./Home.scss";
 
 function Home() {
     return (
-        <div className="home">
-            <Sidebar />
-            <Header />
-            <div className="home-content">
-                <UserCard id="12" />
-                <UserCard id="18" />
-                <UserCard id="18" />
-            </div>
-        </div>
+        <Template>
+            <UserCard id="12" />
+            <UserCard id="18" />
+            <UserCard id="18" />
+        </Template>
     );
 }
 

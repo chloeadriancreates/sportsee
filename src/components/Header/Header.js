@@ -8,7 +8,7 @@ function Header() {
             <Link to="/">
                 <img src={logo} alt="Logo de Sportsee" />
             </Link>
-            <p className="header-link">Accueil</p>
+            <Link to="/" className="header-link">Accueil</Link>
             <p className="header-link">Profil</p>
             <p className="header-link">Réglages</p>
             <p className="header-link">Communauté</p>
