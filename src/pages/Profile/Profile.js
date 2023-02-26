@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Counter from "../../components/Counter/Counter";
 import Greeting from "../../components/Greeting/Greeting";
 import Header from "../../components/Header/Header";
@@ -6,8 +7,8 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import { getData } from "../../utils/getData";
 import "./Profile.scss";
 
-function Profile(props) {
-    const { id } = props;
+function Profile() {
+    let { id } = useParams();
     const [user, setUser] = useState();
 
     useEffect(() => {

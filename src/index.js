@@ -1,13 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.scss";
-import Profile from "./pages/Profile/Profile";
 import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.scss";
+import Home from "./pages/Home/Home";
+import Profile from "./pages/Profile/Profile";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />
+  },
+  {
+    path: "/user/:id",
+    element: <Profile />
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Profile id="12" />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
