@@ -1,10 +1,23 @@
+import { useEffect, useState } from "react";
 import Counter from "../../components/Counter/Counter";
 import Greeting from "../../components/Greeting/Greeting";
 import Header from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import { getData } from "../../utils/getData";
 import "./Profile.scss";
 
-function Profile() {
+function Profile(props) {
+    const { id } = props;
+    const [user, setUser] = useState();
+
+    useEffect(() => {
+        getData(`http://localhost:3000/user/${id}`, setUser);
+    }, [id]);
+
+    useEffect(() => {
+        console.log(user);
+    }, [user]);
+
     return (
         <div className="profile">
             <Header />
