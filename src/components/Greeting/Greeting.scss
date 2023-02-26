@@ -1,0 +1,16 @@
+@use "../../utils/colors";
+
+.greeting {
+    &-heading {
+        font-size: 48px;
+        font-weight: 500;
+
+        &-highlight {
+            color: colors.$bright;
+        }
+    }
+
+    &-subheading {
+        font-size: 18px;
+    }
+}

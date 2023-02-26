@@ -3,10 +3,9 @@
 
 .sidebar {
     @include mixins.flex(column, center, center);
-    flex-grow: 1;
     background: colors.$dark;
     width: fit-content;
-    height: 100%;
+    height: 88vh;
     padding: 60px 26px;
 
     &-box {
