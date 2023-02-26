@@ -1,0 +1,29 @@
+@use "../../utils/colors";
+@use "../../utils/mixins";
+
+.counter {
+    @include mixins.flex;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &-caption {
+        @include mixins.flex(column, center, flex-start);
+        margin-left: 24px;
+
+        &-value {
+            margin: 0 0 5px 0;
+            font-weight: 700;
+            font-size: 20px;
+            color: colors.$dark;
+        }
+
+        &-type {
+            margin: 0;
+            font-weight: 500;
+            font-size: 14px;
+            color: colors.$light;
+        }
+    }
+}

@@ -13,6 +13,14 @@
         &-content {
             flex-grow: 1;
             padding: 70px 110px;
+
+            &-stats {
+                @include mixins.flex(row, center, flex-start);
+
+                &-counters {
+                    @include mixins.flex(column, space-between, flex-start);
+                }
+            }
         }
     }
 }
