@@ -5,15 +5,10 @@
     min-height: 100vh;
     width: 100vw;
 
-    &-main {
-        @include mixins.flex(row, center, flex-start);
+    &-content {
+        @include mixins.flex(row, space-between, flex-start);
+        margin-top: 116px;
+        padding: 70px 110px 70px 297px;
         width: 100%;
-        flex-grow: 1;
-
-        &-content {
-            @include mixins.flex(row, space-between, flex-start);
-            flex-grow: 1;
-            padding: 70px 110px;
-        }
     }
 }

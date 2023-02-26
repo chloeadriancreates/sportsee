@@ -2,24 +2,16 @@
 
 .profile {
     @include mixins.flex(column, flex-start, flex-start);
-    min-height: 100vh;
-    width: 100vw;
 
-    &-main {
-        @include mixins.flex(row, start, flex-start);
-        width: 100%;
-        flex-grow: 1;
+    &-content {
+        margin: 116px 0 0 187px;
+        padding: 70px 110px;
 
-        &-content {
-            flex-grow: 1;
-            padding: 70px 110px;
+        &-stats {
+            @include mixins.flex(row, space-between, flex-start);
 
-            &-stats {
-                @include mixins.flex(row, space-between, flex-start);
-
-                &-counters {
-                    @include mixins.flex(column, space-between, flex-start);
-                }
+            &-counters {
+                @include mixins.flex(column, space-between, flex-start);
             }
         }
     }

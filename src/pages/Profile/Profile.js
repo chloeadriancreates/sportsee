@@ -21,23 +21,21 @@ function Profile() {
 
     return (
         <div className="profile">
+            <Sidebar />
             <Header />
-            <div className="profile-main">
-                <Sidebar />
-                { user &&
-                    <div className="profile-main-content">
-                        <Greeting name={user.data.userInfos.firstName} />
-                        <div className="profile-main-content-stats">
-                            <div className="profile-main-content-stats-counters">
-                                <Counter value={user.data.keyData.calorieCount} type="Calories" />
-                                <Counter value={user.data.keyData.proteinCount} type="Protéines" />
-                                <Counter value={user.data.keyData.carbohydrateCount} type="Glucides" />
-                                <Counter value={user.data.keyData.lipidCount} type="Lipides" />
-                            </div>
+            { user &&
+                <div className="profile-content">
+                    <Greeting name={user.data.userInfos.firstName} />
+                    <div className="profile-content-stats">
+                        <div className="profile-content-stats-counters">
+                            <Counter value={user.data.keyData.calorieCount} type="Calories" />
+                            <Counter value={user.data.keyData.proteinCount} type="Protéines" />
+                            <Counter value={user.data.keyData.carbohydrateCount} type="Glucides" />
+                            <Counter value={user.data.keyData.lipidCount} type="Lipides" />
                         </div>
                     </div>
-                }
-            </div>
+                </div>
+            }
         </div>
     );
 }
