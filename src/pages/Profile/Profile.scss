@@ -1,0 +1,7 @@
+@use "../../utils/mixins";
+
+.profile {
+    @include mixins.flex(column, flex-start, flex-start);
+    min-height: 100vh;
+    width: 100vw;
+}

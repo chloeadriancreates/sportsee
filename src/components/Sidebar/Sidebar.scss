@@ -1,0 +1,34 @@
+@use "../../utils/colors";
+@use "../../utils/mixins";
+
+.sidebar {
+    @include mixins.flex(column, center, center);
+    flex-grow: 1;
+    background: colors.$dark;
+    width: fit-content;
+    height: 100%;
+    padding: 60px 26px;
+
+    &-box {
+        &-button {
+            @include mixins.flex;
+            background-color: white;
+            height: 64px;
+            width: 64px;
+            border-radius: 6px;
+            
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &-copyright {
+        color: white;
+        font-size: 12px;
+        transform: rotate(-90deg);
+        justify-self: flex-end;
+        position: relative;
+        bottom: -140px;
+    }
+}

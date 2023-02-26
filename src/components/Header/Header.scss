@@ -5,6 +5,7 @@
     @include mixins.flex(row, space-between, center);
     background-color: colors.$dark;
     padding: 20px 30px;
+    width: 100%;
 
     &-link {
         color: white;
