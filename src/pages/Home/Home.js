@@ -1,7 +1,7 @@
 import Header from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import { Link } from "react-router-dom";
 import "./Home.scss";
+import UserCard from "../../components/UserCard/UserCard";
 
 function Home() {
   return (
@@ -10,8 +10,9 @@ function Home() {
             <div className="home-main">
                 <Sidebar />
                 <div className="home-main-content">
-                  <Link to="/user/12">User 12</Link>
-                  <Link to="/user/18">User 18</Link>
+                  <UserCard id="12" />
+                  <UserCard id="18" />
+                  <UserCard id="18" />
                 </div>
             </div>
         </div>
