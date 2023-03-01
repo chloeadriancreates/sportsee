@@ -22,13 +22,13 @@ function Profile() {
         <Template>
             { user &&
                 <div>
-                    <Greeting name={user.data.userInfos.firstName} />
+                    <Greeting name={user.name} />
                     <div className="stats">
                         <div className="stats-counters">
-                            <Counter value={user.data.keyData.calorieCount} type="Calories" />
-                            <Counter value={user.data.keyData.proteinCount} type="Protéines" />
-                            <Counter value={user.data.keyData.carbohydrateCount} type="Glucides" />
-                            <Counter value={user.data.keyData.lipidCount} type="Lipides" />
+                            <Counter value={user.calories} type="Calories" />
+                            <Counter value={user.protein} type="Protéines" />
+                            <Counter value={user.carbs} type="Glucides" />
+                            <Counter value={user.lipids} type="Lipides" />
                         </div>
                     </div>
                 </div>
