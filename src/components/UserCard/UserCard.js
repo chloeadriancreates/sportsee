@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import user from "../../assets/user.png";
 import "./UserCard.scss";
 
@@ -11,5 +12,9 @@ function UserCard(props) {
         </Link>
     );
 }
+
+UserCard.propTypes = {
+    id: PropTypes.number
+};
 
 export default UserCard;

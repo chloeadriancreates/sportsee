@@ -1,4 +1,5 @@
 import "./Greeting.scss";
+import PropTypes from "prop-types";
 
 function Greeting(props) {
     const { name } = props;
@@ -10,5 +11,9 @@ function Greeting(props) {
         </div>
     );
 }
+
+Greeting.propTypes = {
+    name: PropTypes.string
+};
 
 export default Greeting;

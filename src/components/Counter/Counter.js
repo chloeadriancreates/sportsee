@@ -1,5 +1,6 @@
 import "./Counter.scss";
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import calories from "../../assets/calories.svg";
 import carbs from "../../assets/carbs.svg";
 import lipids from "../../assets/lipids.svg";
@@ -43,5 +44,10 @@ function Counter(props) {
         </div>
     );
 }
+
+Counter.propTypes = {
+    value: PropTypes.number,
+    type: PropTypes.string
+};
 
 export default Counter;
