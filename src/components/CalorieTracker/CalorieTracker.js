@@ -1,5 +1,6 @@
 import "./CalorieTracker.scss";
 import CalorieTooltip from "../CalorieTooltip/CalorieTooltip";
+import PropTypes from "prop-types";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, CartesianGrid } from "recharts";
 
 function CalorieTracker({ data }) {
@@ -23,5 +24,9 @@ function CalorieTracker({ data }) {
         </ResponsiveContainer>
     );
 }
+
+CalorieTracker.propTypes = {
+    data: PropTypes.array.isRequired
+};
 
 export default CalorieTracker;
