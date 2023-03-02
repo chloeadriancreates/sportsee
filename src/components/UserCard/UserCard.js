@@ -14,7 +14,7 @@ function UserCard(props) {
 }
 
 UserCard.propTypes = {
-    id: PropTypes.number
+    id: PropTypes.string
 };
 
 export default UserCard;
