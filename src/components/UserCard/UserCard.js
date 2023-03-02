@@ -13,7 +13,7 @@ function UserCard({ id }) {
 }
 
 UserCard.propTypes = {
-    id: PropTypes.string
+    id: PropTypes.string.isRequired
 };
 
 export default UserCard;

@@ -45,8 +45,8 @@ function Counter({ value, type }) {
 }
 
 Counter.propTypes = {
-    value: PropTypes.number,
-    type: PropTypes.string
+    value: PropTypes.number.isRequired,
+    type: PropTypes.string.isRequired
 };
 
 export default Counter;
