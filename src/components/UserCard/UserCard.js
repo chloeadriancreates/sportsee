@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import user from "../../assets/user.png";
 import "./UserCard.scss";
 
-function UserCard(props) {
-    const { id } = props;
+function UserCard({ id }) {
     return (
         <Link to={`/user/${id}`} className="userCard">
             <img src={user} alt="Utilisateur" className="userCard-icon" />

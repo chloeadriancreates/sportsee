@@ -6,8 +6,7 @@ import carbs from "../../assets/carbs.svg";
 import lipids from "../../assets/lipids.svg";
 import protein from "../../assets/protein.svg";
 
-function Counter(props) {
-    const { value, type } = props;
+function Counter({ value, type }) {
     const [unit, setUnit] = useState();
     const [icon, setIcon] = useState();
 
