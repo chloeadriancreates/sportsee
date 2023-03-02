@@ -10,9 +10,9 @@ import "./Profile.scss";
 function Profile() {
     let { id } = useParams();
     const [user, setUser] = useState();
-    const [activity, setActivity] = useState();
-    const [averageSession, setAverageSession] = useState();
-    const [performance, setPerformance] = useState();
+    // const [activity, setActivity] = useState();
+    // const [averageSession, setAverageSession] = useState();
+    // const [performance, setPerformance] = useState();
 
     useEffect(() => {
         getData(`http://localhost:3000/user/${id}`, setUser);
@@ -25,17 +25,17 @@ function Profile() {
         console.log(user);
     }, [user]);
 
-    useEffect(() => {
-        console.log(activity);
-    }, [activity]);
+    // useEffect(() => {
+    //     console.log(activity);
+    // }, [activity]);
 
-    useEffect(() => {
-        console.log(averageSession);
-    }, [averageSession]);
+    // useEffect(() => {
+    //     console.log(averageSession);
+    // }, [averageSession]);
 
-    useEffect(() => {
-        console.log(performance);
-    }, [performance]);
+    // useEffect(() => {
+    //     console.log(performance);
+    // }, [performance]);
 
     return (
         <Template>

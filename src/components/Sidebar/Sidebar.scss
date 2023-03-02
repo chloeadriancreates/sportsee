@@ -2,16 +2,19 @@
 @use "../../utils/mixins";
 
 .sidebar {
-    @include mixins.flex(column, center, center);
+    @include mixins.flex(column, space-around, center);
     position: fixed;
     left: 0;
     background: colors.$dark;
     width: fit-content;
     height: 100vh;
     bottom: 0;
-    padding: 60px 26px;
+    padding: 180px 26px 60px;
 
     &-box {
+        @include mixins.flex(column, center, center);
+        flex-grow: 1;
+        
         &-button {
             @include mixins.flex;
             background-color: white;
@@ -28,9 +31,7 @@
     &-copyright {
         color: white;
         font-size: 12px;
-        transform: rotate(-90deg);
-        justify-self: flex-end;
-        position: relative;
-        bottom: -140px;
+        transform: rotate(180deg);
+        writing-mode: vertical-rl;
     }
 }

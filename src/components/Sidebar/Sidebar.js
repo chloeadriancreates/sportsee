@@ -21,7 +21,7 @@ function Sidebar() {
                     <img className="sidebar-box-button-icon" src={lift} alt="Musculation" />
                 </div>
             </div>
-            <p className="sidebar-copyright">Copyright, SportSee 2020</p>
+                <p className="sidebar-copyright">Copyright, SportSee 2020</p>
         </div>
     );
 }
