@@ -5,56 +5,85 @@
  */
 
 export class User {
-    constructor(data) {
-        this.name = data.userInfos.firstName;
-        this.calories = data.keyData.calorieCount;
-        this.protein = data.keyData.proteinCount;
-        this.carbs = data.keyData.carbohydrateCount;
-        this.lipids = data.keyData.lipidCount;
+    constructor() {
+        this.name = "";
+        this.overview = {
+            calories: 0,
+            protein: 0,
+            carbs: 0,
+            lipids: 0
+        };
+        this.pastWeek = [
+            {
+                name: "1",
+                weight: 0,
+                calories: 0
+            },
+            {
+                name: "2",
+                weight: 0,
+                calories: 0
+            },
+            {
+                name: "3",
+                weight: 0,
+                calories: 0
+            },
+            {
+                name: "4",
+                weight: 0,
+                calories: 0
+            },
+            {
+                name: "5",
+                weight: 0,
+                calories: 0
+            },
+            {
+                name: "6",
+                weight: 0,
+                calories: 0
+            },
+            {
+                name: "7",
+                weight: 0,
+                calories: 0
+            }
+        ];
     }
 
     /**
-     * Returns the user's name.
+     * Edits the user's name.
      * @method
-     * @returns {string}
+     * @param {string} name - The user's new name.
      */
-    getName() {
-        return this.name;
+    setName(name) {
+        this.name = name;
     }
 
     /**
-     * Returns the user's calorie count.
+     * Edits the user's data overview.
      * @method
-     * @returns {number}
+     * @param {Object} overview - The user's new data overview.
      */
-    getCalories() {
-        return this.calories;
+    setOverview(overview) {
+        this.overview = {
+            calories: overview.calorieCount,
+            protein: overview.proteinCount,
+            carbs: overview.carbohydrateCount,
+            lipids: overview.lipidCount
+        };
     }
 
     /**
-     * Returns the user's protein count.
+     * Edits the user's last week of sessions.
      * @method
-     * @returns {number}
+     * @param {Array} sessions - The user's new sessions.
      */
-    getProtein() {
-        return this.protein;
-    }
-
-    /**
-     * Returns the user's carb count.
-     * @method
-     * @returns {number}
-     */
-    getCarbs() {
-        return this.carbs;
-    }
-
-    /**
-     * Returns the user's lipid count.
-     * @method
-     * @returns {number}
-     */
-    getLipids() {
-        return this.lipids;
+    setPastWeek(sessions) {
+        this.pastWeek.forEach(day => {
+            day.weight = sessions[day.name - 1].kilogram;
+            day.calories = sessions[day.name - 1].calories;
+        });
     }
 }

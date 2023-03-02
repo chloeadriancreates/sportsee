@@ -2,40 +2,7 @@ import "./CalorieTracker.scss";
 import CalorieTooltip from "../CalorieTooltip/CalorieTooltip";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, CartesianGrid } from "recharts";
 
-function CalorieTracker(props) {
-    const data = [
-        {
-            name: "1",
-            weight: 80,
-            calories: 220
-        },
-        {
-            name: "2",
-            weight: 81,
-            calories: 280
-        },
-        {
-            name: "1",
-            weight: 81,
-            calories: 290
-        },
-        {
-            name: "1",
-            weight: 80,
-            calories: 160
-        },
-        {
-            name: "1",
-            weight: 78,
-            calories: 162
-        },
-        {
-            name: "1",
-            weight: 76,
-            calories: 390
-        }
-    ];
-
+function CalorieTracker({ data }) {
     return (
         <ResponsiveContainer width={835} height={320}>
             <BarChart
