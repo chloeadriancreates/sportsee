@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import user from "../../assets/user.png";
 import "./UserCard.scss";
 
-function UserCard({ id }) {
+function UserCard({ id, name }) {
     return (
         <Link to={`/user/${id}`} className="userCard">
             <img src={user} alt="Utilisateur" className="userCard-icon" />
-            <p className="userCard-name">User {id}</p>
+            <p className="userCard-name">{name}</p>
         </Link>
     );
 }

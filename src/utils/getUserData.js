@@ -9,13 +9,24 @@ import { User } from "./User";
  */
 
 export async function getUserData(id, setUser) {
+    let mainUrl;
+    let activityUrl;
+
+    if(id === "12" || id === "18") {
+        mainUrl = `http://localhost:3000/user/${id}`;
+        activityUrl = `http://localhost:3000/user/${id}/activity`;
+    } else {
+        mainUrl = "http://localhost:3001/mockUser.json";
+        activityUrl = "http://localhost:3001/mockActivity.json";
+    }
+
     const formattedUser = new User();
 
-    const mainResponse = await axios.get(`http://localhost:3000/user/${id}`);
+    const mainResponse = await axios.get(mainUrl);
     formattedUser.setName(mainResponse.data.data.userInfos.firstName);
     formattedUser.setOverview(mainResponse.data.data.keyData);
 
-    const activityResponse = await axios.get(`http://localhost:3000/user/${id}/activity`);
+    const activityResponse = await axios.get(activityUrl);
     formattedUser.setPastWeek(activityResponse.data.data.sessions);
     console.log(activityResponse.data.data);
 

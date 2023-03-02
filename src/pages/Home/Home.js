@@ -5,9 +5,9 @@ import "./Home.scss";
 function Home() {
     return (
         <Template>
-            <UserCard id="12" />
-            <UserCard id="18" />
-            <UserCard id="18" />
+            <UserCard id="12" name="Karl" />
+            <UserCard id="18" name="Cecilia" />
+            <UserCard id="3" name="Emma" />
         </Template>
     );
 }
