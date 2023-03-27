@@ -5,10 +5,9 @@ import { User } from "./User";
  * Fetches data from provided URL.
  * @function
  * @param {string} id - The ID of the user.
- * @param {callback} setUser - The update function of the useState variable the data will be assigned to.
  */
 
-export async function getUserData(id, setUser) {
+export async function getUserData(id) {
     let mainUrl;
     let activityUrl;
 
@@ -22,13 +21,18 @@ export async function getUserData(id, setUser) {
 
     const formattedUser = new User();
 
-    const mainResponse = await axios.get(mainUrl);
-    formattedUser.setName(mainResponse.data.data.userInfos.firstName);
-    formattedUser.setOverview(mainResponse.data.data.keyData);
+    try {
+        const mainResponse = await axios.get(mainUrl);
+        formattedUser.setName(mainResponse.data.data.userInfos.firstName);
+        formattedUser.setOverview(mainResponse.data.data.keyData);
 
-    const activityResponse = await axios.get(activityUrl);
-    formattedUser.setPastWeek(activityResponse.data.data.sessions);
-    console.log(activityResponse.data.data);
+        const activityResponse = await axios.get(activityUrl);
+        formattedUser.setPastWeek(activityResponse.data.data.sessions);
 
-    setUser(formattedUser);
+        console.log(formattedUser);
+
+        return formattedUser;
+    } catch(error) {
+        console.log(error);
+    }
 }
