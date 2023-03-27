@@ -5,7 +5,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, Cart
 
 function CalorieTracker({ data }) {
     return (
-        <ResponsiveContainer width={835} height={320}>
+        <ResponsiveContainer>
             <BarChart
                 width={800}
                 height={300}

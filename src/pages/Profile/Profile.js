@@ -27,26 +27,24 @@ function Profile() {
         console.log(user);
     }, [user]);
 
-    return (
-        <Template>
-            { Object.keys(user).length > 0 &&
-                <div>
-                    <Greeting name={user.name} />
-                    <div className="stats">
-                        <div className="stats-graphs">
-                            <CalorieTracker data={user.pastWeek} />
+    if (Object.keys(user).length) {
+        return (
+            <Template orientation="column">
+                        <Greeting name={user.name} />
+                        <div className="stats">
+                            <div className="stats-graphs">
+                                <CalorieTracker data={user.pastWeek} />
+                            </div>
+                            <div className="stats-counters">
+                                <Counter value={user.overview.calories} type="Calories" />
+                                <Counter value={user.overview.protein} type="Protéines" />
+                                <Counter value={user.overview.carbs} type="Glucides" />
+                                <Counter value={user.overview.lipids} type="Lipides" />
+                            </div>
                         </div>
-                        <div className="stats-counters">
-                            <Counter value={user.overview.calories} type="Calories" />
-                            <Counter value={user.overview.protein} type="Protéines" />
-                            <Counter value={user.overview.carbs} type="Glucides" />
-                            <Counter value={user.overview.lipids} type="Lipides" />
-                        </div>
-                    </div>
-                </div>
-            }
-        </Template>
-    );
+            </Template>
+        );
+    }
 }
 
 export default Profile;

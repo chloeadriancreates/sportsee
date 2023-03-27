@@ -4,7 +4,7 @@ import "./Home.scss";
 
 function Home() {
     return (
-        <Template>
+        <Template orientation="row">
             <UserCard id="12" name="Karl" />
             <UserCard id="18" name="Cecilia" />
             <UserCard id="3" name="Emma" />

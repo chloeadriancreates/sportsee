@@ -3,6 +3,10 @@
 .stats {
     @include mixins.flex(row, space-between, flex-start);
 
+    &-graphs {
+        width: 100%;
+    }
+
     &-counters {
         @include mixins.flex(column, space-between, flex-start);
     }
