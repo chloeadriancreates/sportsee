@@ -10,13 +10,16 @@ import { User } from "../classes/User";
 export async function getUserData(id) {
     let mainUrl;
     let activityUrl;
+    let averageSessionUrl;
 
     if(id === "12" || id === "18") {
         mainUrl = `http://localhost:3000/user/${id}`;
         activityUrl = `http://localhost:3000/user/${id}/activity`;
+        averageSessionUrl = `http://localhost:3000/user/${id}/average-sessions`;
     } else {
         mainUrl = "http://localhost:3001/mockUser.json";
         activityUrl = "http://localhost:3001/mockActivity.json";
+        averageSessionUrl = `http://localhost:3000/user/${id}/average-sessions`;
     }
 
     const formattedUser = new User();
@@ -27,7 +30,8 @@ export async function getUserData(id) {
         formattedUser.setOverview(mainResponse.data.data.keyData);
 
         const activityResponse = await axios.get(activityUrl);
-        formattedUser.setPastWeek(activityResponse.data.data.sessions);
+        const averageSessionResponse = await axios.get(averageSessionUrl);
+        formattedUser.setPastWeek(activityResponse.data.data.sessions, averageSessionResponse.data.data.sessions);
 
         console.log(formattedUser);
 

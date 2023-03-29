@@ -18,8 +18,6 @@ function Profile() {
         };
 
         fetchData();
-
-        // getData(`http://localhost:3000/user/${id}/average-sessions`, setAverageSession);
         // getData(`http://localhost:3000/user/${id}/performance`, setPerformance);
     }, [id]);
 

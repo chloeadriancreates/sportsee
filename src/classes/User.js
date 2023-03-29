@@ -15,39 +15,46 @@ export class User {
         };
         this.pastWeek = [
             {
-                name: "1",
+                day: 1,
                 weight: 0,
-                calories: 0
+                calories: 0,
+                duration: 0
             },
             {
-                name: "2",
+                day: 2,
                 weight: 0,
-                calories: 0
+                calories: 0,
+                duration: 0
             },
             {
-                name: "3",
+                day: 3,
                 weight: 0,
-                calories: 0
+                calories: 0,
+                duration: 0
             },
             {
-                name: "4",
+                day: 4,
                 weight: 0,
-                calories: 0
+                calories: 0,
+                duration: 0
             },
             {
-                name: "5",
+                day: 5,
                 weight: 0,
-                calories: 0
+                calories: 0,
+                duration: 0
             },
             {
-                name: "6",
+                day: 6,
                 weight: 0,
-                calories: 0
+                calories: 0,
+                duration: 0
             },
             {
-                name: "7",
+                day: 7,
                 weight: 0,
-                calories: 0
+                calories: 0,
+                duration: 0
             }
         ];
     }
@@ -80,10 +87,11 @@ export class User {
      * @method
      * @param {Array} sessions - The user's new sessions.
      */
-    setPastWeek(sessions) {
+    setPastWeek(sessions, sessionDurations) {
         this.pastWeek.forEach(day => {
-            day.weight = sessions[day.name - 1].kilogram;
-            day.calories = sessions[day.name - 1].calories;
+            day.weight = sessions[day.day - 1].kilogram;
+            day.calories = sessions[day.day - 1].calories;
+            day.duration = sessionDurations[day.day - 1].sessionLength;
         });
     }
 }
