@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CalorieTracker from "../../components/CalorieTracker/CalorieTracker";
 import Counter from "../../components/Counter/Counter";
+import DurationTracker from "../../components/DurationTracker/DurationTracker";
 import Greeting from "../../components/Greeting/Greeting";
 import Template from "../../components/Template/Template";
 import { getUserData } from "../../services/getUserData";
@@ -32,6 +33,7 @@ function Profile() {
                         <div className="stats">
                             <div className="stats-graphs">
                                 <CalorieTracker data={user.pastWeek} />
+                                <DurationTracker data={user.pastWeek} />
                             </div>
                             <div className="stats-counters">
                                 <Counter value={user.overview.calories} type="Calories" />

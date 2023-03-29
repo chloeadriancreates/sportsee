@@ -14,7 +14,7 @@ function CalorieTracker({ data }) {
             barCategoryGap={40}
         >
             <XAxis
-                dataKey="name"
+                dataKey="day"
                 tickLine={false}
                 style={{
                     fontSize: "14px",

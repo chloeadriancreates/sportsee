@@ -16,42 +16,49 @@ export class User {
         this.pastWeek = [
             {
                 day: 1,
+                name: "L",
                 weight: 0,
                 calories: 0,
                 duration: 0
             },
             {
                 day: 2,
+                name: "M",
                 weight: 0,
                 calories: 0,
                 duration: 0
             },
             {
                 day: 3,
+                name: "M",
                 weight: 0,
                 calories: 0,
                 duration: 0
             },
             {
                 day: 4,
+                name: "J",
                 weight: 0,
                 calories: 0,
                 duration: 0
             },
             {
                 day: 5,
+                name: "V",
                 weight: 0,
                 calories: 0,
                 duration: 0
             },
             {
                 day: 6,
+                name: "S",
                 weight: 0,
                 calories: 0,
                 duration: 0
             },
             {
                 day: 7,
+                name: "D",
                 weight: 0,
                 calories: 0,
                 duration: 0
