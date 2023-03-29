@@ -1,0 +1,31 @@
+@use "../../utils/colors";
+@use "../../utils/mixins";
+
+.calorieLegend {
+    @include mixins.flex(row, space-between, center);
+
+    &-title {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    &-list {
+        @include mixins.flex(row, flex-end, center);
+        list-style-type: none;
+
+        &-item {
+            @include mixins.flex(row, center, center);
+            color: colors.$darkGrey;
+            font-weight: 500;
+            font-size: 14px;
+
+            &:last-child {
+                margin-left: 32px;
+            }
+
+            &-bullet {
+                margin-right: 10px;
+            }
+        }
+    }
+}

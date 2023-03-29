@@ -2,6 +2,7 @@
 
 .stats {
     @include mixins.flex(row, space-between, flex-start);
+    width: 100%;
 
     &-graphs {
         width: 100%;

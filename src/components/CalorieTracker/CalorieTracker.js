@@ -1,27 +1,43 @@
 import "./CalorieTracker.scss";
 import CalorieTooltip from "../CalorieTooltip/CalorieTooltip";
 import PropTypes from "prop-types";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, CartesianGrid } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from "recharts";
+import CalorieLegend from "../CalorieLegend/CalorieLegend";
 
 function CalorieTracker({ data }) {
     return (
-        <ResponsiveContainer>
-            <BarChart
-                width={800}
-                height={300}
-                data={data}
-                barGap={8}
-                barCategoryGap={40}
-            >
-                <XAxis dataKey="name" tickLine={false} />
-                <YAxis orientation="right" axisLine={false} tickLine={false} />
-                <CartesianGrid vertical={false} strokeDasharray="1.5" />
-                <Tooltip content={CalorieTooltip} />
-                <Legend />
-                <Bar dataKey="weight" fill="#282D30" radius={[50, 50, 0, 0]} />
-                <Bar dataKey="calories" fill="#E60000" radius={[50, 50, 0, 0]} />
-            </BarChart>
-        </ResponsiveContainer>
+        <BarChart
+            width={835}
+            height={320}
+            data={data}
+            barGap={8}
+            barCategoryGap={40}
+        >
+            <XAxis dataKey="name" tickLine={false} />
+            <YAxis dataKey="calories" hide={true} />
+            <YAxis
+                yAxisId="weight"
+                dataKey="weight"
+                orientation="right"
+                domain={["dataMin - 3", "dataMax + 2"]}
+                tickLine={false}
+                axisLine={false}
+                tickMargin={20}
+                tickCount={3}
+            />
+            <CartesianGrid vertical={false} strokeDasharray="2" />
+            <Tooltip content={CalorieTooltip} />
+            <Bar dataKey="weight" fill="#282D30" radius={[50, 50, 0, 0]} name="Poids (kg)" />
+            <Bar dataKey="calories" fill="#E60000" radius={[50, 50, 0, 0]} name="Calories (kCal)" />
+            <Legend content={CalorieLegend} verticalAlign="top" />
+            {/* <Legend
+                verticalAlign="top"
+                align="right"
+                iconType="circle"
+                iconSize={7}
+                height={80}
+            /> */}
+        </BarChart>
     );
 }
 
