@@ -1,5 +1,5 @@
 import axios from "axios";
-import { User } from "./User";
+import { User } from "../classes/User";
 
 /**
  * Fetches data from provided URL.

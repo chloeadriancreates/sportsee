@@ -1,4 +1,4 @@
-@use "../../utils/mixins";
+@use "../../styles/mixins";
 
 .template {
     @include mixins.flex(column, flex-start, flex-start);

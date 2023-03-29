@@ -4,7 +4,7 @@ import CalorieTracker from "../../components/CalorieTracker/CalorieTracker";
 import Counter from "../../components/Counter/Counter";
 import Greeting from "../../components/Greeting/Greeting";
 import Template from "../../components/Template/Template";
-import { getUserData } from "../../utils/getUserData";
+import { getUserData } from "../../services/getUserData";
 import "./Profile.scss";
 
 function Profile() {

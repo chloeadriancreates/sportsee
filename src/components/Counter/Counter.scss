@@ -1,5 +1,5 @@
-@use "../../utils/colors";
-@use "../../utils/mixins";
+@use "../../styles/colors";
+@use "../../styles/mixins";
 
 .counter {
     @include mixins.flex;

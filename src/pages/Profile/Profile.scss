@@ -1,4 +1,4 @@
-@use "../../utils/mixins";
+@use "../../styles/mixins";
 
 .stats {
     @include mixins.flex(row, space-between, flex-start);
