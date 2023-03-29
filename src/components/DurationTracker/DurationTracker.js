@@ -1,5 +1,7 @@
 import "./DurationTracker.scss";
 import { LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
+import DurationTooltip from "../DurationTooltip/DurationTooltip";
+import DurationCursor from "../DurationCursor/DurationCursor";
 
 function DurationTracker({data}) {
     return (
@@ -15,9 +17,9 @@ function DurationTracker({data}) {
                 tickLine={false}
                 axisLine={false}
                 fontSize={12}
+                style={{ margin: "12px" }}
             />
             <YAxis domain={["dataMin - 20", "dataMax + 20"]} hide={true} />
-            <Tooltip />
             <Line
                 type="natural"
                 dataKey="duration"
@@ -34,6 +36,7 @@ function DurationTracker({data}) {
             >
                 Durée moyenne des sessions
             </text>
+            <Tooltip content={<DurationTooltip />} cursor={<DurationCursor />} />
         </LineChart>
     );
 }
