@@ -64,6 +64,32 @@ export class User {
                 duration: 0
             }
         ];
+        this.performance = [
+            // {
+            //     stat: 0,
+            //     type: ""
+            // },
+            // {
+            //     stat: 0,
+            //     type: ""
+            // },
+            // {
+            //     stat: 0,
+            //     type: ""
+            // },
+            // {
+            //     stat: 0,
+            //     type: ""
+            // },
+            // {
+            //     stat: 0,
+            //     type: ""
+            // },
+            // {
+            //     stat: 0,
+            //     type: ""
+            // }
+        ];
     }
 
     /**
@@ -99,6 +125,15 @@ export class User {
             day.weight = sessions[day.day - 1].kilogram;
             day.calories = sessions[day.day - 1].calories;
             day.duration = sessionDurations[day.day - 1].sessionLength;
+        });
+    }
+
+    setPerformance(performance) {
+        performance.data.forEach(stat => {
+            this.performance.push({
+                stat: stat.value,
+                type: performance.kind[stat.kind]
+            });
         });
     }
 }

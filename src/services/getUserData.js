@@ -38,6 +38,7 @@ export async function getUserData(id) {
 
         const performanceResponse = await axios.get(performanceUrl);
         console.log(performanceResponse.data.data);
+        formattedUser.setPerformance(performanceResponse.data.data);
 
         console.log(formattedUser);
 
