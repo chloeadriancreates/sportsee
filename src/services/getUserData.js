@@ -11,15 +11,18 @@ export async function getUserData(id) {
     let mainUrl;
     let activityUrl;
     let averageSessionUrl;
+    let performanceUrl;
 
     if(id === "12" || id === "18") {
         mainUrl = `http://localhost:3000/user/${id}`;
         activityUrl = `http://localhost:3000/user/${id}/activity`;
         averageSessionUrl = `http://localhost:3000/user/${id}/average-sessions`;
+        performanceUrl = `http://localhost:3000/user/${id}/performance`;
     } else {
-        mainUrl = "http://localhost:3001/mockUser.json";
-        activityUrl = "http://localhost:3001/mockActivity.json";
-        averageSessionUrl = `http://localhost:3000/user/${id}/average-sessions`;
+        mainUrl = "http://localhost:3003/mockUser.json";
+        activityUrl = "http://localhost:3003/mockActivity.json";
+        averageSessionUrl = "http://localhost:3003/mockAverageSession.json";
+        // performanceUrl = `http://localhost:3000/user/${id}/performance`;
     }
 
     const formattedUser = new User();
@@ -33,7 +36,12 @@ export async function getUserData(id) {
         const averageSessionResponse = await axios.get(averageSessionUrl);
         formattedUser.setPastWeek(activityResponse.data.data.sessions, averageSessionResponse.data.data.sessions);
 
-        console.log(formattedUser);
+        console.log(averageSessionResponse.data.data);
+
+        // const performanceResponse = await axios.get(performanceUrl);
+        // console.log(performanceResponse.data.data);
+
+        // console.log(formattedUser);
 
         return formattedUser;
     } catch(error) {
