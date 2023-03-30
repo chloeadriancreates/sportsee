@@ -1,7 +1,7 @@
 import "./DurationTracker.scss";
 import { LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
-import DurationTooltip from "../DurationTooltip/DurationTooltip";
-import DurationCursor from "../DurationCursor/DurationCursor";
+import DurationTooltip from "./DurationTooltip/DurationTooltip";
+import DurationCursor from "./DurationCursor/DurationCursor";
 
 function DurationTracker({data}) {
     return (

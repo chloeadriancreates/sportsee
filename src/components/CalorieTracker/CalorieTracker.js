@@ -1,8 +1,8 @@
 import "./CalorieTracker.scss";
-import CalorieTooltip from "../CalorieTooltip/CalorieTooltip";
+import CalorieTooltip from "./CalorieTooltip/CalorieTooltip";
 import PropTypes from "prop-types";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from "recharts";
-import CalorieLegend from "../CalorieLegend/CalorieLegend";
+import CalorieLegend from "./CalorieLegend/CalorieLegend";
 
 function CalorieTracker({ data }) {
     return (
