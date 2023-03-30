@@ -64,32 +64,7 @@ export class User {
                 duration: 0
             }
         ];
-        this.performance = [
-            // {
-            //     stat: 0,
-            //     type: ""
-            // },
-            // {
-            //     stat: 0,
-            //     type: ""
-            // },
-            // {
-            //     stat: 0,
-            //     type: ""
-            // },
-            // {
-            //     stat: 0,
-            //     type: ""
-            // },
-            // {
-            //     stat: 0,
-            //     type: ""
-            // },
-            // {
-            //     stat: 0,
-            //     type: ""
-            // }
-        ];
+        this.performance = [];
     }
 
     /**
@@ -128,6 +103,11 @@ export class User {
         });
     }
 
+    /**
+     * Edits the user's performance stats.
+     * @method
+     * @param {Array} performance - The user's stats and their category.
+     */
     setPerformance(performance) {
         performance.data.forEach(stat => {
             this.performance.push({
