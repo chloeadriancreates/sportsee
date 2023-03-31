@@ -106,14 +106,24 @@ export class User {
     /**
      * Edits the user's performance stats.
      * @method
-     * @param {Array} performance - The user's stats and their category.
+     * @param {Array} performance - The user's stats, with their score and their category.
      */
     setPerformance(performance) {
+        const translationTable = {
+            "cardio": "Cardio",
+            "energy": "Énergie",
+            "endurance": "Endurance",
+            "strength": "Force",
+            "speed": "Vitesse",
+            "intensity": "Intensité"
+        };
+        performance.data.sort((a, b) => b.kind - a.kind);
         performance.data.forEach(stat => {
             this.performance.push({
-                stat: stat.value,
-                type: performance.kind[stat.kind]
+                score: stat.value,
+                type: translationTable[performance.kind[stat.kind]]
             });
         });
+        console.log(performance);
     }
 }

@@ -4,6 +4,7 @@ import CalorieTracker from "../../components/CalorieTracker/CalorieTracker";
 import Counter from "../../components/Counter/Counter";
 import DurationTracker from "../../components/DurationTracker/DurationTracker";
 import Greeting from "../../components/Greeting/Greeting";
+import PerformanceTracker from "../../components/PerformanceTracker/PerformanceTracker";
 import Template from "../../components/Template/Template";
 import { getUserData } from "../../services/getUserData";
 import "./Profile.scss";
@@ -17,9 +18,7 @@ function Profile() {
             const data = await getUserData(id);
             setUser(data);
         };
-
         fetchData();
-        // getData(`http://localhost:3000/user/${id}/performance`, setPerformance);
     }, [id]);
 
     useEffect(() => {
@@ -34,6 +33,7 @@ function Profile() {
                             <div className="stats-graphs">
                                 <CalorieTracker data={user.pastWeek} />
                                 <DurationTracker data={user.pastWeek} />
+                                <PerformanceTracker data={user.performance} />
                             </div>
                             <div className="stats-counters">
                                 <Counter value={user.overview.calories} type="Calories" />
