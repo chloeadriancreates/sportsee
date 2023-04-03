@@ -1,8 +1,7 @@
 import "./Greeting.scss";
 import PropTypes from "prop-types";
 
-function Greeting(props) {
-    const { name } = props;
+function Greeting({name}) {
 
     return (
         <div className="greeting">

@@ -1,8 +1,7 @@
 import "./PerformanceTracker.scss";
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from "recharts";
 
-function PerformanceTracker(props) {
-    const { data } = props;
+function PerformanceTracker({data}) {
 
     return (
         <RadarChart
