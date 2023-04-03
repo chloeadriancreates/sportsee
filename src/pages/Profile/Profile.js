@@ -5,6 +5,7 @@ import Counter from "../../components/Counter/Counter";
 import DurationTracker from "../../components/DurationTracker/DurationTracker";
 import Greeting from "../../components/Greeting/Greeting";
 import PerformanceTracker from "../../components/PerformanceTracker/PerformanceTracker";
+import ScoreTracker from "../../components/ScoreTracker/ScoreTracker";
 import Template from "../../components/Template/Template";
 import { getUserData } from "../../services/getUserData";
 import "./Profile.scss";
@@ -34,6 +35,7 @@ function Profile() {
                                 <CalorieTracker data={user.pastWeek} />
                                 <DurationTracker data={user.pastWeek} />
                                 <PerformanceTracker data={user.performance} />
+                                <ScoreTracker data={user.score} />
                             </div>
                             <div className="stats-counters">
                                 <Counter value={user.overview.calories} type="Calories" />

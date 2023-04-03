@@ -7,6 +7,7 @@
 export class User {
     constructor() {
         this.name = "";
+        this.score = 0;
         this.overview = {
             calories: 0,
             protein: 0,
@@ -77,6 +78,15 @@ export class User {
     }
 
     /**
+     * Edits the user's score.
+     * @method
+     * @param {number} name - The user's new score.
+     */
+    setScore(score) {
+        this.score = score;
+    }
+
+    /**
      * Edits the user's data overview.
      * @method
      * @param {Object} overview - The user's new data overview.
@@ -106,7 +116,7 @@ export class User {
     /**
      * Edits the user's performance stats.
      * @method
-     * @param {Array} performance - The user's stats, with their score and their category.
+     * @param {Array} performance - The user's new stats, with their score and their category.
      */
     setPerformance(performance) {
         const translationTable = {
@@ -124,6 +134,5 @@ export class User {
                 type: translationTable[performance.kind[stat.kind]]
             });
         });
-        console.log(performance);
     }
 }

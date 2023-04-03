@@ -19,10 +19,10 @@ export async function getUserData(id) {
         averageSessionUrl = `http://localhost:3000/user/${id}/average-sessions`;
         performanceUrl = `http://localhost:3000/user/${id}/performance`;
     } else {
-        mainUrl = "http://localhost:3003/mockUser.json";
-        activityUrl = "http://localhost:3003/mockActivity.json";
-        averageSessionUrl = "http://localhost:3003/mockAverageSession.json";
-        performanceUrl = "http://localhost:3003/mockPerformance.json";
+        mainUrl = "http://localhost:3001/mockUser.json";
+        activityUrl = "http://localhost:3001/mockActivity.json";
+        averageSessionUrl = "http://localhost:3001/mockAverageSession.json";
+        performanceUrl = "http://localhost:3001/mockPerformance.json";
     }
 
     const formattedUser = new User();
@@ -30,6 +30,11 @@ export async function getUserData(id) {
     try {
         const mainResponse = await axios.get(mainUrl);
         formattedUser.setName(mainResponse.data.data.userInfos.firstName);
+        if(mainResponse.data.data.score) {
+            formattedUser.setScore(mainResponse.data.data.score);
+        } else {
+            formattedUser.setScore(mainResponse.data.data.todayScore);
+        }
         formattedUser.setOverview(mainResponse.data.data.keyData);
 
         const activityResponse = await axios.get(activityUrl);
@@ -39,6 +44,8 @@ export async function getUserData(id) {
         const performanceResponse = await axios.get(performanceUrl);
         console.log(performanceResponse.data.data);
         formattedUser.setPerformance(performanceResponse.data.data);
+
+        console.log(mainResponse.data.data);
 
         console.log(formattedUser);
 
