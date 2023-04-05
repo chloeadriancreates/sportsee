@@ -3,11 +3,11 @@ import { LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
 import DurationTooltip from "./DurationTooltip/DurationTooltip";
 import DurationCursor from "./DurationCursor/DurationCursor";
 
-function DurationTracker({data}) {
+function DurationTracker({data, modifier}) {
     return (
         <LineChart
-            width={260}
-            height={260}
+            width={260 * modifier}
+            height={260 * modifier}
             data={data}
             style={{ backgroundColor: "#FF0000", borderRadius: 5 }}
         >
@@ -16,7 +16,7 @@ function DurationTracker({data}) {
                 tick={{ fill: "#ffffff", opacity: 0.5 }}
                 tickLine={false}
                 axisLine={false}
-                fontSize={12}
+                fontSize={12 * modifier}
                 style={{ margin: "12px" }}
             />
             <YAxis domain={["dataMin - 20", "dataMax + 20"]} hide={true} />
@@ -24,7 +24,7 @@ function DurationTracker({data}) {
                 type="natural"
                 dataKey="duration"
                 stroke="#FFFFFF"
-                strokeWidth={2}
+                strokeWidth={2 * modifier}
                 dot={false}
             />
             <text
@@ -32,7 +32,7 @@ function DurationTracker({data}) {
                 y="10%"
                 textAnchor="start"
                 dominantBaseline="middle"
-                style={{ opacity: 0.5, fill: "#ffffff", fontSize: 15 }}
+                style={{ opacity: 0.5, fill: "#ffffff", fontSize: 15 * modifier }}
             >
                 Durée moyenne des sessions
             </text>

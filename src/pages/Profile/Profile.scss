@@ -7,6 +7,10 @@
 
     &-graphs {
         width: 100%;
+
+        &-row {
+            @include mixins.flex(row, space-between, center);
+        }
     }
 
     &-counters {

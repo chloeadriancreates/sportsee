@@ -13,6 +13,8 @@ import "./Profile.scss";
 function Profile() {
     let { id } = useParams();
     const [user, setUser] = useState({});
+    const [windowWidth, setWindowWidth] = useState(0);
+    const [modifier, setModifier] = useState(1);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -23,8 +25,18 @@ function Profile() {
     }, [id]);
 
     useEffect(() => {
-        console.log(user);
-    }, [user]);
+        setWindowWidth(window.innerWidth);
+      }, []);
+
+    useEffect(() => {
+    if(windowWidth < 1200) {
+        setModifier(0.7);
+    } else if(windowWidth < 1400) {
+        setModifier(0.8);
+    } else {
+        setModifier(1);
+    }
+    }, [windowWidth]);
 
     if (Object.keys(user).length) {
         return (
@@ -32,10 +44,12 @@ function Profile() {
                         <Greeting name={user.name} />
                         <div className="stats">
                             <div className="stats-graphs">
-                                <CalorieTracker data={user.pastWeek} />
-                                <DurationTracker data={user.pastWeek} />
-                                <PerformanceTracker data={user.performance} />
-                                <ScoreTracker data={user.score} />
+                                <CalorieTracker data={user.pastWeek} modifier={modifier} />
+                                <div className="stats-graphs-row">
+                                    <DurationTracker data={user.pastWeek} modifier={modifier} />
+                                    <PerformanceTracker data={user.performance} modifier={modifier} />
+                                    <ScoreTracker data={user.score} modifier={modifier} />
+                                </div>
                             </div>
                             <div className="stats-counters">
                                 <Counter value={user.overview.calories} type="Calories" />

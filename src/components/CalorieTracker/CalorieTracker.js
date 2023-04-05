@@ -4,20 +4,20 @@ import PropTypes from "prop-types";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from "recharts";
 import CalorieLegend from "./CalorieLegend/CalorieLegend";
 
-function CalorieTracker({ data }) {
+function CalorieTracker({data, modifier}) {
     return (
         <BarChart
-            width={835}
-            height={320}
+            width={835 * modifier}
+            height={320 * modifier}
             data={data}
-            barGap={8}
-            barCategoryGap={40}
+            barGap={8 * modifier}
+            barCategoryGap={40 * modifier}
         >
             <XAxis
                 dataKey="day"
                 tickLine={false}
+                fontSize={14 * modifier}
                 style={{
-                    fontSize: "14px",
                     fontFamily: "Roboto",
                     fontWeight: "500",
                     color: "#74798C"
@@ -31,10 +31,10 @@ function CalorieTracker({ data }) {
                 domain={["dataMin - 3", "dataMax + 2"]}
                 tickLine={false}
                 axisLine={false}
-                tickMargin={20}
+                tickMargin={20 * modifier}
                 tickCount={3}
+                fontSize={14 * modifier}
                 style={{
-                    fontSize: "14px",
                     fontFamily: "Roboto",
                     fontWeight: "500",
                     color: "#74798C"
