@@ -1,15 +1,18 @@
 @use "../../styles/mixins";
 
 .stats {
-    @include mixins.flex(row, space-between, flex-start);
+    @include mixins.flex(row, space-between, center);
     width: 100%;
-    z-index: -10;
 
     &-graphs {
         width: 100%;
 
         &-row {
             @include mixins.flex(row, space-between, center);
+
+            @include mixins.small {
+                margin-top: 50px;
+            }
         }
     }
 

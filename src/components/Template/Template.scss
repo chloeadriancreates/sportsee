@@ -7,8 +7,16 @@
 
     &-content {
         margin-top: 116px;
-        padding: 70px 110px 70px 297px;
+        padding: 50px 110px 50px 226px;
         width: 100%;
+
+        @include mixins.medium {
+            padding: 50px 90px 50px 206px;
+        }
+
+        @include mixins.extra-small {
+            padding: 50px 70px 50px 186px;
+        }
 
         &--row {
             @include mixins.flex(row, space-between, flex-start);
