@@ -42,13 +42,9 @@ export async function getUserData(id) {
         formattedUser.setPastWeek(activityResponse.data.data.sessions, averageSessionResponse.data.data.sessions);
 
         const performanceResponse = await axios.get(performanceUrl);
-        console.log(performanceResponse.data.data);
         formattedUser.setPerformance(performanceResponse.data.data);
 
-        console.log(mainResponse.data.data);
-
         console.log(formattedUser);
-
         return formattedUser;
     } catch(error) {
         console.log(error);
