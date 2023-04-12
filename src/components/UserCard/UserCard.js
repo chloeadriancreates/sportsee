@@ -14,8 +14,8 @@ function UserCard({ id, name }) {
     );
 }
 
+export default UserCard;
+
 UserCard.propTypes = {
     id: PropTypes.string.isRequired
 };
-
-export default UserCard;

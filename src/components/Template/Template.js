@@ -1,6 +1,7 @@
 import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
 import "./Template.scss";
+import PropTypes from "prop-types";
 
 function Template({ orientation, children }) {
     return (
@@ -15,3 +16,8 @@ function Template({ orientation, children }) {
 }
 
 export default Template;
+
+Template.propTypes = {
+    orientation: PropTypes.string.isRequired,
+    children: PropTypes.array.isRequired
+  };

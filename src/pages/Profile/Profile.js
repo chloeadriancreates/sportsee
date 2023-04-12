@@ -26,7 +26,7 @@ function Profile() {
 
     useEffect(() => {
         setWindowWidth(window.innerWidth);
-      }, []);
+    }, []);
 
     useEffect(() => {
     if(windowWidth < 1100) {

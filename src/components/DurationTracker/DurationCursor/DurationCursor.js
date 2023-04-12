@@ -1,5 +1,6 @@
 import "./DurationCursor.scss";
 import { Rectangle } from "recharts";
+import PropTypes from "prop-types";
 
 function DurationCursor({ points }) {
     return (
@@ -14,3 +15,7 @@ function DurationCursor({ points }) {
 };
 
 export default DurationCursor;
+
+DurationCursor.propTypes = {
+  points: PropTypes.array
+};

@@ -1,4 +1,5 @@
 import "./CalorieTooltip.scss";
+import PropTypes from "prop-types";
 
 function CalorieTooltip({ active, payload }) {
     if (active && payload && payload.length) {
@@ -14,3 +15,8 @@ function CalorieTooltip({ active, payload }) {
 };
 
 export default CalorieTooltip;
+
+CalorieTooltip.propTypes = {
+  active: PropTypes.bool.isRequired,
+  payload: PropTypes.array.isRequired
+};

@@ -11,8 +11,8 @@ function Greeting({name}) {
     );
 }
 
+export default Greeting;
+
 Greeting.propTypes = {
     name: PropTypes.string
 };
-
-export default Greeting;

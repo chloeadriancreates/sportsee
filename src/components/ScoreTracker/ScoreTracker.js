@@ -1,5 +1,6 @@
 import "./ScoreTracker.scss";
 import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
+import PropTypes from "prop-types";
 
 function ScoreTracker({data, modifier}) {
     const formattedData = [
@@ -33,3 +34,8 @@ function ScoreTracker({data, modifier}) {
 }
 
 export default ScoreTracker;
+
+ScoreTracker.propTypes = {
+  data: PropTypes.number.isRequired,
+  modifier: PropTypes.number.isRequired
+};

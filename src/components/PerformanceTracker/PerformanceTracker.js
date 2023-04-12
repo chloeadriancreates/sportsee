@@ -1,5 +1,6 @@
 import "./PerformanceTracker.scss";
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from "recharts";
+import PropTypes from "prop-types";
 
 function PerformanceTracker({data, modifier}) {
 
@@ -23,3 +24,8 @@ function PerformanceTracker({data, modifier}) {
 }
 
 export default PerformanceTracker;
+
+PerformanceTracker.propTypes = {
+    data: PropTypes.array.isRequired,
+    modifier: PropTypes.number.isRequired
+};

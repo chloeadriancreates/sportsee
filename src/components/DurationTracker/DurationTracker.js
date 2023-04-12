@@ -2,6 +2,7 @@ import "./DurationTracker.scss";
 import { LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
 import DurationTooltip from "./DurationTooltip/DurationTooltip";
 import DurationCursor from "./DurationCursor/DurationCursor";
+import PropTypes from "prop-types";
 
 function DurationTracker({data, modifier}) {
     return (
@@ -47,3 +48,8 @@ function DurationTracker({data, modifier}) {
 }
 
 export default DurationTracker;
+
+DurationTracker.propTypes = {
+    data: PropTypes.array.isRequired,
+    modifier: PropTypes.number.isRequired
+};

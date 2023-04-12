@@ -1,4 +1,5 @@
 import "./CalorieLegend.scss";
+import PropTypes from "prop-types";
 
 function CalorieLegend({ payload }) {
     return (
@@ -20,3 +21,7 @@ function CalorieLegend({ payload }) {
 };
 
 export default CalorieLegend;
+
+CalorieLegend.propTypes = {
+    payload: PropTypes.array.isRequired
+};
