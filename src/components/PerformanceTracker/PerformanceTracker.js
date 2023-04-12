@@ -2,8 +2,13 @@ import "./PerformanceTracker.scss";
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from "recharts";
 import PropTypes from "prop-types";
 
+/**
+ * Displays the performance tracker.
+ * @component
+ * @param {Array} data - The user's performance data in each category (from user.performance).
+ * @param {Number} modifier - The size modifier for the graph, calculated in Profile.
+*/
 export default function PerformanceTracker({data, modifier}) {
-
     return (
         <RadarChart
             width={260 * modifier}

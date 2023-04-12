@@ -1,6 +1,11 @@
 import "./CalorieLegend.scss";
 import PropTypes from "prop-types";
 
+/**
+ * Displays the calorie tracker's legend.
+ * @component
+ * @param {Array} payload - The calorie tracker's different categories – passed automatically from CalorieTracker by Recharts.
+*/
 export default function CalorieLegend({ payload }) {
     return (
         <div className="calorieLegend">

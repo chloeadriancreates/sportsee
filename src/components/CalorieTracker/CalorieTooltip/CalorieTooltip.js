@@ -1,6 +1,12 @@
 import "./CalorieTooltip.scss";
 import PropTypes from "prop-types";
 
+/**
+ * Displays the calorie tracker's tooltip.
+ * @component
+ * @param {Boolean} active - The status of the tooltip – passed automatically from CalorieTracker by Recharts.
+ * @param {Array} payload - The weight and calorie values of the selected bar – passed automatically from CalorieTracker by Recharts.
+*/
 export default function CalorieTooltip({ active, payload }) {
     if (active && payload && payload.length) {
       return (

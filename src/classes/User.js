@@ -1,9 +1,7 @@
 /**
- * Formats the data fetched from back-end.
+ * Formats the user data fetched from back-end.
  * @class
- * @param {Object} data
- */
-
+*/
 export class User {
     constructor() {
         this.name = "";
@@ -72,7 +70,7 @@ export class User {
      * Edits the user's name.
      * @method
      * @param {string} name - The user's new name.
-     */
+    */
     setName(name) {
         this.name = name;
     }
@@ -81,7 +79,7 @@ export class User {
      * Edits the user's score.
      * @method
      * @param {number} name - The user's new score.
-     */
+    */
     setScore(score) {
         this.score = score;
     }
@@ -90,7 +88,7 @@ export class User {
      * Edits the user's data overview.
      * @method
      * @param {Object} overview - The user's new data overview.
-     */
+    */
     setOverview(overview) {
         this.overview = {
             calories: overview.calorieCount,
@@ -104,7 +102,8 @@ export class User {
      * Edits the user's last week of sessions.
      * @method
      * @param {Array} sessions - The user's new sessions.
-     */
+     * @param {Array} sessionDurations - The user's new session durations.
+    */
     setPastWeek(sessions, sessionDurations) {
         this.pastWeek.forEach(day => {
             day.weight = sessions[day.day - 1].kilogram;
@@ -117,7 +116,7 @@ export class User {
      * Edits the user's performance stats.
      * @method
      * @param {Array} performance - The user's new stats, with their score and their category.
-     */
+    */
     setPerformance(performance) {
         const translationTable = {
             "cardio": "Cardio",

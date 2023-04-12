@@ -2,6 +2,12 @@ import "./ScoreTracker.scss";
 import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
 import PropTypes from "prop-types";
 
+/**
+ * Displays the score tracker.
+ * @component
+ * @param {Number} data - The user's score (from user.score).
+ * @param {Number} modifier - The size modifier for the graph, calculated in Profile.
+*/
 export default function ScoreTracker({data, modifier}) {
     const formattedData = [
       {

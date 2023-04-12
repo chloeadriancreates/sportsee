@@ -10,6 +10,10 @@ import Template from "../../components/Template/Template";
 import { getUserData } from "../../services/getUserData";
 import "./Profile.scss";
 
+/**
+ * Displays a profile page – the id of the user is passed in parameters via ReactRouter.
+ * @component
+*/
 export default function Profile() {
     let { id } = useParams();
     const [user, setUser] = useState({});

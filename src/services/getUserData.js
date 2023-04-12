@@ -2,10 +2,10 @@ import axios from "axios";
 import { User } from "../classes/User";
 
 /**
- * Fetches data from provided URL.
+ * Fetches user data from back-end and assigns it to a new instance of the User class.
  * @function
  * @param {string} id - The ID of the user.
- */
+*/
 
 export async function getUserData(id) {
     let mainUrl;

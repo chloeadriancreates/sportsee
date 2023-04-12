@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import "./Header.scss";
 
+/**
+ * Displays the header.
+ * @component
+*/
 export default function Header() {
     return (
         <header className="header">

@@ -4,6 +4,10 @@ import lift from "../../assets/lift.svg";
 import swim from "../../assets/swim.svg";
 import yoga from "../../assets/yoga.svg";
 
+/**
+ * Displays the sidebar.
+ * @component
+*/
 export default function Sidebar() {
     return (
         <div className="sidebar">

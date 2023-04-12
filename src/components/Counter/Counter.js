@@ -6,6 +6,12 @@ import carbs from "../../assets/carbs.svg";
 import lipids from "../../assets/lipids.svg";
 import protein from "../../assets/protein.svg";
 
+/**
+ * Displays one of the different counters, for calories, carbs, lipids or protein.
+ * @component
+ * @param {Number} value - The number value for this counter.
+ * @param {String} type - The type of this counter, to determine the unit.
+*/
 export default function Counter({ value, type }) {
     const [unit, setUnit] = useState();
     const [icon, setIcon] = useState();

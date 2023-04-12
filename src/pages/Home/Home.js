@@ -2,6 +2,10 @@ import UserCard from "../../components/UserCard/UserCard";
 import Template from "../../components/Template/Template";
 import "./Home.scss";
 
+/**
+ * Displays the home page.
+ * @component
+*/
 export default function Home() {
     return (
         <Template orientation="row">

@@ -4,6 +4,12 @@ import PropTypes from "prop-types";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from "recharts";
 import CalorieLegend from "./CalorieLegend/CalorieLegend";
 
+/**
+ * Displays the calorie tracker.
+ * @component
+ * @param {Array} data - The user's weight and calorie data for the past week (from user.pastWeek).
+ * @param {Number} modifier - The size modifier for the graph, calculated in Profile.
+*/
 export default function CalorieTracker({data, modifier}) {
     return (
         <BarChart
@@ -58,5 +64,6 @@ export default function CalorieTracker({data, modifier}) {
 }
 
 CalorieTracker.propTypes = {
-    data: PropTypes.array.isRequired
+    data: PropTypes.array.isRequired,
+    modifier: PropTypes.number.isRequired
 };

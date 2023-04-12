@@ -4,6 +4,12 @@ import DurationTooltip from "./DurationTooltip/DurationTooltip";
 import DurationCursor from "./DurationCursor/DurationCursor";
 import PropTypes from "prop-types";
 
+/**
+ * Displays the duration tracker.
+ * @component
+ * @param {Array} data - The user's session duration data for the past week (from user.pastWeek).
+ * @param {Number} modifier - The size modifier for the graph, calculated in Profile.
+*/
 export default function DurationTracker({data, modifier}) {
     return (
         <LineChart
