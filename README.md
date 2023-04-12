@@ -1,11 +1,9 @@
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F.svg?style=for-the-badge&logo=node.js&logoColor=white)
-![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/sass-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![NodeJS](https://img.shields.io/badge/-NodeJS-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=react&logoColor=black)
+![Sass](https://img.shields.io/badge/-Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
-![logo](src/assets/logo.svg)
+![Logo](src/assets/logo.svg)
 
 ## Presentation
 SportSee is a dashboard prototype for tracking a user's workout stats (weight, calorie intake, performance...).  
@@ -40,5 +38,7 @@ Once the back-end is running on port 3000:
 - Run `npm start`
 - You should get a message warning you that something's already running on port 3000, and asking if you want to run this on another port: say yes!
 
-Happy coding! 
+---
+
+Thanks for reading, and happy coding!  
 Chloé Adrian
