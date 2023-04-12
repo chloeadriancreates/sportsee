@@ -6,7 +6,7 @@ import carbs from "../../assets/carbs.svg";
 import lipids from "../../assets/lipids.svg";
 import protein from "../../assets/protein.svg";
 
-function Counter({ value, type }) {
+export default function Counter({ value, type }) {
     const [unit, setUnit] = useState();
     const [icon, setIcon] = useState();
 
@@ -48,5 +48,3 @@ Counter.propTypes = {
     value: PropTypes.number.isRequired,
     type: PropTypes.string.isRequired
 };
-
-export default Counter;

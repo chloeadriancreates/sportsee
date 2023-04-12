@@ -3,7 +3,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import "./Template.scss";
 import PropTypes from "prop-types";
 
-function Template({ orientation, children }) {
+export default function Template({ orientation, children }) {
     return (
         <div className="template">
             <Sidebar />
@@ -14,8 +14,6 @@ function Template({ orientation, children }) {
         </div>
     );
 }
-
-export default Template;
 
 Template.propTypes = {
     orientation: PropTypes.string.isRequired,

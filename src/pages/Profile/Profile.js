@@ -10,7 +10,7 @@ import Template from "../../components/Template/Template";
 import { getUserData } from "../../services/getUserData";
 import "./Profile.scss";
 
-function Profile() {
+export default function Profile() {
     let { id } = useParams();
     const [user, setUser] = useState({});
     const [windowWidth, setWindowWidth] = useState(0);
@@ -62,5 +62,3 @@ function Profile() {
         );
     }
 }
-
-export default Profile;

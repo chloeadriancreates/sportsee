@@ -1,7 +1,7 @@
 import "./CalorieLegend.scss";
 import PropTypes from "prop-types";
 
-function CalorieLegend({ payload }) {
+export default function CalorieLegend({ payload }) {
     return (
         <div className="calorieLegend">
             <h2 className="calorieLegend-title">Activité quotidienne</h2>
@@ -19,8 +19,6 @@ function CalorieLegend({ payload }) {
         </div>
     );
 };
-
-export default CalorieLegend;
 
 CalorieLegend.propTypes = {
     payload: PropTypes.array.isRequired

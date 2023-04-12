@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from "recharts";
 import CalorieLegend from "./CalorieLegend/CalorieLegend";
 
-function CalorieTracker({data, modifier}) {
+export default function CalorieTracker({data, modifier}) {
     return (
         <BarChart
             width={835 * modifier}
@@ -60,5 +60,3 @@ function CalorieTracker({data, modifier}) {
 CalorieTracker.propTypes = {
     data: PropTypes.array.isRequired
 };
-
-export default CalorieTracker;

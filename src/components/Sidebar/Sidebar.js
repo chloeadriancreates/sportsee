@@ -4,7 +4,7 @@ import lift from "../../assets/lift.svg";
 import swim from "../../assets/swim.svg";
 import yoga from "../../assets/yoga.svg";
 
-function Sidebar() {
+export default function Sidebar() {
     return (
         <div className="sidebar">
             <div className="sidebar-box">
@@ -25,5 +25,3 @@ function Sidebar() {
         </div>
     );
 }
-
-export default Sidebar;

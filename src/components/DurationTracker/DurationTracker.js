@@ -4,7 +4,7 @@ import DurationTooltip from "./DurationTooltip/DurationTooltip";
 import DurationCursor from "./DurationCursor/DurationCursor";
 import PropTypes from "prop-types";
 
-function DurationTracker({data, modifier}) {
+export default function DurationTracker({data, modifier}) {
     return (
         <LineChart
             width={260 * modifier}
@@ -46,8 +46,6 @@ function DurationTracker({data, modifier}) {
         </LineChart>
     );
 }
-
-export default DurationTracker;
 
 DurationTracker.propTypes = {
     data: PropTypes.array.isRequired,

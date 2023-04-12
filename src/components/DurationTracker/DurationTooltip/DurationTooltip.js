@@ -1,7 +1,7 @@
 import "./DurationTooltip.scss";
 import PropTypes from "prop-types";
 
-function DurationTooltip({ active, payload }) {
+export default function DurationTooltip({ active, payload }) {
     if (active && payload && payload.length) {
       return (
         <div className="durationTooltip">
@@ -12,8 +12,6 @@ function DurationTooltip({ active, payload }) {
 
     return null;
 };
-
-export default DurationTooltip;
 
 DurationTooltip.propTypes = {
   active: PropTypes.bool,

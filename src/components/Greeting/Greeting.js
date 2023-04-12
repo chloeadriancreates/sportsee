@@ -1,7 +1,7 @@
 import "./Greeting.scss";
 import PropTypes from "prop-types";
 
-function Greeting({name}) {
+export default function Greeting({name}) {
 
     return (
         <div className="greeting">
@@ -10,8 +10,6 @@ function Greeting({name}) {
         </div>
     );
 }
-
-export default Greeting;
 
 Greeting.propTypes = {
     name: PropTypes.string

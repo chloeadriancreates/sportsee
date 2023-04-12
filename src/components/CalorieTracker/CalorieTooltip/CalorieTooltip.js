@@ -1,7 +1,7 @@
 import "./CalorieTooltip.scss";
 import PropTypes from "prop-types";
 
-function CalorieTooltip({ active, payload }) {
+export default function CalorieTooltip({ active, payload }) {
     if (active && payload && payload.length) {
       return (
         <div className="calorieTooltip">
@@ -13,8 +13,6 @@ function CalorieTooltip({ active, payload }) {
 
     return null;
 };
-
-export default CalorieTooltip;
 
 CalorieTooltip.propTypes = {
   active: PropTypes.bool.isRequired,
