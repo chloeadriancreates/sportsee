@@ -3,16 +3,11 @@
 .template {
     @include mixins.flex(column, flex-start, flex-start);
     min-height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
 
     &-content {
-        margin-top: 116px;
-        padding: 50px 110px 50px 226px;
+        padding: 50px 90px 50px 206px;
         width: 100%;
-
-        @include mixins.medium {
-            padding: 50px 90px 50px 206px;
-        }
 
         @include mixins.extra-small {
             padding: 50px 70px 50px 186px;

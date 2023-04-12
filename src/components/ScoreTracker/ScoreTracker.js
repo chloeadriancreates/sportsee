@@ -21,7 +21,7 @@ function ScoreTracker({data, modifier}) {
             barSize={10 * modifier}
             style={{ backgroundColor: "#FBFBFB", borderRadius: 5 }}
           >
-            <circle cx="50%" cy="50%" fill="white" r="75"></circle>
+            <circle cx="50%" cy="50%" fill="white" r={75 * modifier}></circle>
             <PolarAngleAxis type="number" domain={[0, 100]} tick={false} />
             <RadialBar dataKey="score" cornerRadius="10" />
             <text fontWeight="700" fill="#282D30" x="50%" y="45%" textAnchor="middle" fontSize={26 * modifier}>{`${data * 100}%`}</text>

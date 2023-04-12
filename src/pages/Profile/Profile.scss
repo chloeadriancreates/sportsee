@@ -6,12 +6,18 @@
 
     &-graphs {
         width: 100%;
+        margin-right: 50px;
 
         &-row {
-            @include mixins.flex(row, space-between, center);
+            @include mixins.flex(row, flex-start, center);
+            margin-top: 30px;
 
             @include mixins.small {
                 margin-top: 50px;
+            }
+
+            & > *:not(:last-child) {
+                margin-right: 30px;
             }
         }
     }

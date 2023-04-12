@@ -10,20 +10,29 @@ function CalorieTracker({data, modifier}) {
             width={835 * modifier}
             height={320 * modifier}
             data={data}
+            barSize={7 * modifier}
             barGap={8 * modifier}
             barCategoryGap={40 * modifier}
+            margin={{
+                top: 25 * modifier,
+                right: 30 * modifier,
+                left: 30 * modifier,
+                bottom: 25 * modifier
+            }}
+            style={{ backgroundColor: "#FBFBFB", borderRadius: 5 }}
         >
+            <CartesianGrid vertical={false} strokeDasharray="2" />
             <XAxis
                 dataKey="day"
                 tickLine={false}
-                fontSize={14 * modifier}
-                style={{
-                    fontFamily: "Roboto",
-                    fontWeight: "500",
-                    color: "#74798C"
+                stroke="#DEDEDE"
+                tick={{
+                    fill: "#9B9EAC",
+                    fontWeight: 500,
+                    fontSize: 14 * modifier
                 }}
             />
-            <YAxis dataKey="calories" hide={true} />
+            <YAxis dataKey="calories" hide={true} tickCount={3} />
             <YAxis
                 yAxisId="weight"
                 dataKey="weight"
@@ -33,14 +42,13 @@ function CalorieTracker({data, modifier}) {
                 axisLine={false}
                 tickMargin={20 * modifier}
                 tickCount={3}
-                fontSize={14 * modifier}
-                style={{
-                    fontFamily: "Roboto",
-                    fontWeight: "500",
-                    color: "#74798C"
+                stroke="#DEDEDE"
+                tick={{
+                    fill: "#9B9EAC",
+                    fontWeight: 500,
+                    fontSize: 14 * modifier
                 }}
             />
-            <CartesianGrid vertical={false} strokeDasharray="2" />
             <Tooltip content={CalorieTooltip} />
             <Bar dataKey="weight" fill="#282D30" radius={[50, 50, 0, 0]} name="Poids (kg)" />
             <Bar dataKey="calories" fill="#E60000" radius={[50, 50, 0, 0]} name="Calories (kCal)" />

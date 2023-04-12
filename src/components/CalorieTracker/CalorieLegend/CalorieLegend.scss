@@ -3,15 +3,18 @@
 
 .calorieLegend {
     @include mixins.flex(row, space-between, center);
+    margin-bottom: 30px;
 
     &-title {
         font-weight: 500;
         font-size: 15px;
+        margin: 0;
     }
 
     &-list {
         @include mixins.flex(row, flex-end, center);
         list-style-type: none;
+        margin: 0;
 
         &-item {
             @include mixins.flex(row, center, center);

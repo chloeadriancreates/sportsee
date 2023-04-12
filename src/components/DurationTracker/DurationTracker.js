@@ -9,6 +9,12 @@ function DurationTracker({data, modifier}) {
             width={260 * modifier}
             height={260 * modifier}
             data={data}
+            margin={{
+                top: 0,
+                right: 0,
+                left: 0,
+                bottom: 0
+            }}
             style={{ backgroundColor: "#FF0000", borderRadius: 5 }}
         >
             <XAxis
@@ -17,7 +23,6 @@ function DurationTracker({data, modifier}) {
                 tickLine={false}
                 axisLine={false}
                 fontSize={12 * modifier}
-                style={{ margin: "12px" }}
             />
             <YAxis domain={["dataMin - 20", "dataMax + 20"]} hide={true} />
             <Line

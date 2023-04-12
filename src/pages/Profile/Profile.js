@@ -30,8 +30,8 @@ function Profile() {
 
     useEffect(() => {
     if(windowWidth < 1100) {
-        setModifier(0.7);
-    } else if(windowWidth < 1300) {
+        setModifier(0.6);
+    } else if(windowWidth < 1350) {
         setModifier(0.8);
     } else {
         setModifier(1);
