@@ -10,9 +10,9 @@ SportSee is a dashboard prototype for tracking a user's workout stats (weight, c
 This is project #12 of my OpenClassrooms front-end development course!
 
 ## Prerequisites
-- [NodeJS (**version 16.15.0**)](https://nodejs.org/en/)
-- [NPM (**version 8.5.5**)](https://www.npmjs.com/)
-- [React (**version 17.0.2**)](https://en.reactjs.org/)
+- [NodeJS (version 16.17.0)](https://nodejs.org/en/)
+- [NPM (version 9.4.0)](https://www.npmjs.com/)
+- [React (version 18.2.0)](https://en.reactjs.org/)
 
 ## Installing the app
 
@@ -22,23 +22,21 @@ This repository is the front-end part of Sportsee. The back-end is in this repos
 ### Front-end
 Once the back-end is installed:
 - Fork and clone this repository
-- Run `npm install` to install all dependencies
+- Run `$ npm install` to install all dependencies
 
 ## Running the app
 So all links work, you should start the back-end first, so it runs on localhost:3000 and the front-end runs on localhost:3001. To do so:
 
 ### Back-end
-- Move to the location of the back-end repository on your machine using `cd`
-- Run `npm run dev`
+- Move to the root of the back-end repository on your machine
+- Run `$ npm run dev`
 
 ### Front-end
 Once the back-end is running on port 3000:
 - Open a new terminal
-- Move to the location of the front-end repository on your machine using `cd`
-- Run `npm start`
+- Move to the root of the front-end repository on your machine
+- Run `$ npm start`
 - You should get a message warning you that something's already running on port 3000, and asking if you want to run this on another port: say yes!
 
----
-
-Thanks for reading, and happy coding!  
+## Thanks for reading, and happy coding!  
 Chloé Adrian
