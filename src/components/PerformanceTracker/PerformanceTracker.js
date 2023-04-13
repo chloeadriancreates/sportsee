@@ -1,4 +1,3 @@
-import "./PerformanceTracker.scss";
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from "recharts";
 import PropTypes from "prop-types";
 

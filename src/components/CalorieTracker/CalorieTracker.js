@@ -1,4 +1,3 @@
-import "./CalorieTracker.scss";
 import CalorieTooltip from "./CalorieTooltip/CalorieTooltip";
 import PropTypes from "prop-types";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from "recharts";

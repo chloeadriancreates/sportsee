@@ -1,4 +1,3 @@
-import "./ScoreTracker.scss";
 import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
 import PropTypes from "prop-types";
 
