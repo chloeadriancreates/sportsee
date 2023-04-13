@@ -17,10 +17,10 @@ export default function DurationTracker({data, modifier}) {
             height={260 * modifier}
             data={data}
             margin={{
-                top: 0,
-                right: 0,
-                left: 0,
-                bottom: 0
+                top: 15 * modifier,
+                right: 25 * modifier,
+                left: 25 * modifier,
+                bottom: 15 * modifier
             }}
             style={{ backgroundColor: "#FF0000", borderRadius: 5 }}
         >
