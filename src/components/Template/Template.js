@@ -24,4 +24,4 @@ export default function Template({ orientation, children }) {
 Template.propTypes = {
     orientation: PropTypes.string.isRequired,
     children: PropTypes.array.isRequired
-  };
+};
