@@ -21,7 +21,7 @@ export default function PerformanceTracker({data, modifier}) {
         >
             <PolarGrid radialLines={false} />
             <PolarAngleAxis dataKey="type" tick={{ fill: "#FFFFFF", fontSize: 12 * modifier }} />
-            <PolarRadiusAxis angle={80} domain={["dataMin - 20", "dataMax + 20"]} axisLine={false} tick={false} />
+            <PolarRadiusAxis domain={["dataMin - 20", "dataMax + 20"]} axisLine={false} tick={false} />
             <Radar dataKey="score" fill="#FF0101" fillOpacity={0.8} />
         </RadarChart>
     );

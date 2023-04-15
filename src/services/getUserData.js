@@ -8,21 +8,23 @@ import { User } from "../classes/User";
 */
 
 export async function getUserData(id) {
+    const connectedBaseUrl = `http://localhost:3000/user`;
+    const disconnectedBaseUrl = `http://localhost:3001`;
     let mainUrl;
     let activityUrl;
     let averageSessionUrl;
     let performanceUrl;
 
     if(id === "12" || id === "18") {
-        mainUrl = `http://localhost:3000/user/${id}`;
-        activityUrl = `http://localhost:3000/user/${id}/activity`;
-        averageSessionUrl = `http://localhost:3000/user/${id}/average-sessions`;
-        performanceUrl = `http://localhost:3000/user/${id}/performance`;
+        mainUrl = `${connectedBaseUrl}/${id}`;
+        activityUrl = `${connectedBaseUrl}/${id}/activity`;
+        averageSessionUrl = `${connectedBaseUrl}/${id}/average-sessions`;
+        performanceUrl = `${connectedBaseUrl}/${id}/performance`;
     } else {
-        mainUrl = "http://localhost:3001/mockUser.json";
-        activityUrl = "http://localhost:3001/mockActivity.json";
-        averageSessionUrl = "http://localhost:3001/mockAverageSession.json";
-        performanceUrl = "http://localhost:3001/mockPerformance.json";
+        mainUrl = `${disconnectedBaseUrl}/mockUser.json`;
+        activityUrl = `${disconnectedBaseUrl}/mockActivity.json`;
+        averageSessionUrl = `${disconnectedBaseUrl}/mockAverageSession.json`;
+        performanceUrl = `${disconnectedBaseUrl}/mockPerformance.json`;
     }
 
     const formattedUser = new User();
