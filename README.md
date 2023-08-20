@@ -1,8 +1,8 @@
 ![Banner](READMEbanner.jpg)
 
 ## Presentation
-SportSee is a dashboard prototype for tracking a user's workout stats (weight, calorie intake, performance...).  
-This is project #12 of my OpenClassrooms front-end development course!
+*This is a fictional project, which was project 12 of my OpenClassrooms front-end development program.* \
+SportSee is a dashboard prototype for tracking a user's workout stats (weight, calorie intake, performance...).
 
 ## Prerequisites
 - [NodeJS (version 16.17.0)](https://nodejs.org/en/)
